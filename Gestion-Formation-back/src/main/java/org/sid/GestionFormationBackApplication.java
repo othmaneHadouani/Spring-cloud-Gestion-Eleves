@@ -13,9 +13,8 @@ import java.util.ArrayList;
 
 
 @EnableDiscoveryClient
-@SpringBootApplication
 @EnableConfigurationProperties
-
+@SpringBootApplication
 public class GestionFormationBackApplication {
 
     public static void main(String[] args) {
@@ -33,6 +32,7 @@ public class GestionFormationBackApplication {
         eleves.add(new Eleve("imad","ben","3eme",23,"05 bd abd erarhim bouabid tissir 2","0626884346"));
         return args -> {
             eleves.forEach(cn->{
+
                 eleveRepository.save(cn);
             });
             eleveRepository.findAll().forEach(System.out::println );

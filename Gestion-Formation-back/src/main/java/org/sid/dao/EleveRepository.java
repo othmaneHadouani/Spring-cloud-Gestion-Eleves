@@ -7,6 +7,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 
-@CrossOrigin("*")
 public interface EleveRepository extends JpaRepository<Eleve,Long> {
 }

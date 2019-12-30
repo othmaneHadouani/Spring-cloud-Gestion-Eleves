@@ -3,7 +3,7 @@ package org.sid.web;
 
 import org.sid.dao.EleveRepository;
 import org.sid.entities.Eleve;
-import org.sid.metier.ApplicationPropertiesConfiguration;
+import org.sid.metier.ApplicationPropertiesConfigurationImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +15,7 @@ public class EleveController {
 
 
     @Autowired
-    ApplicationPropertiesConfiguration appProperties;
+    ApplicationPropertiesConfigurationImpl appProperties;
 
     @Autowired
     EleveRepository eleveRepository;
@@ -37,8 +37,6 @@ public class EleveController {
     }
 
 
-
-    // Affiche la liste de tous les produits disponibles
     @GetMapping(value = "/params")
     public int listeDesProduits(){
 
